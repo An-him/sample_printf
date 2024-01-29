@@ -59,16 +59,3 @@ int _printf(const char *format, ...)
 
 	return (count);
 }
-/**
- * main - Entry point
- * testing the _printf
- * Return: int
- */
-
-int main(void)
-{
-	_printf("My name is Bismark\n");
-	_printf("My last name is: %s\n", "Agyei");
-	_printf("I am of sex:  %c\n", 'M');
-	_printf("I would love to use the %% sign today\n");
-}
