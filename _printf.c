@@ -6,12 +6,12 @@
  */
 int _printf(const char *format, ...)
 {
-	if (*format == NULL)
+	int count = 0;
+	va_list(args);
+
+	if (format == NULL)
 		return (-1);
 
-	int count = 0;
-
-	va_list(args);
 	va_start(args, format);
 
 	while (*format != '\0')
