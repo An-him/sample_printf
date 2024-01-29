@@ -42,7 +42,7 @@ int _printf(const char *format, ...)
 			else if (*format == 's')
 			{
 				/*This handles a string*/
-				char *str = va_arg(arg, char *);
+				char *str = va_arg(args, char *);
 				int str_len = 0; /* Would be used to store the length of the string*/
 
 				/* Calculate the length */
@@ -58,4 +58,17 @@ int _printf(const char *format, ...)
 	va_end(args);
 
 	return (count);
+}
+/**
+ * main - Entry point
+ * testing the _printf
+ * Return: int
+ */
+
+int main(void)
+{
+	_printf("My name is Bismark\n");
+	_printf("My last name is: %s", "Agyei");
+	_printf("I am of sex:  %c\n", 'M');
+	_printf("I would love to use the %% sign today\n");
 }
